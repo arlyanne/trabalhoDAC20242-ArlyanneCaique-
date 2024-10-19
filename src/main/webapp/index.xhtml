@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head><title>Cadastro Jogo</title></h:head>
+<h:body>
+	<h:form>
+		<p:panel header="Cadastro de Jogo">
+            <p:inputText id="v1" value="#{jogoBean.jogo.v1}" label="Valor 1" required="true">
+                <f:validateLongRange minimum="1" maximum="10"/>
+            </p:inputText>
+
+            <p:inputText id="v2" value="#{jogoBean.jogo.v2}" label="Valor 2" required="true">
+                <f:validateLongRange minimum="1" maximum="10"/>
+            </p:inputText>
+
+          <p:inputText id="v3" value="#{jogoBean.jogo.v3}" label="Valor 3" required="true">
+                <f:validateLongRange minimum="1" maximum="10"/>
+          </p:inputText>
+            
+          <p:inputText id="v4" value="#{jogoBean.jogo.v4}" label="Valor 4" required="true">
+                <f:validateLongRange minimum="1" maximum="10"/>
+          </p:inputText>  
+          
+          <p:inputText id="v5" value="#{jogoBean.jogo.v5}" label="Valor 5" required="true">
+                <f:validateLongRange minimum="1" maximum="10"/>
+          </p:inputText>
+
+            <p:commandButton value="Salvar" action="#{jogoBean.salvar}"/>
+        </p:panel>
+	</h:form>
+	<h:link outcome="listagem.xhtml" value="Ver Listagem"/>
+</h:body>
+</html>
